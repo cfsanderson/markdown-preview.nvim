@@ -1,7 +1,20 @@
-/*
- * github like style
- * https://github.com/iamcco/markdown.css/blob/master/dest/github/markdown.css
- */
+/* DARKDOWN styles vaguely based on Gruvbox Material */
+
+body {
+  background-color: #171819;
+}
+#page-header {
+  background-color: #131415;
+  color: #7daea3;
+  text-align: center;
+  border: solid 1px #111214;
+}
+#page-header h3 svg {
+  display: none;
+}
+#page-header h3 {
+  font-family: "Fira Code";
+}
 .markdown-body ol ol,
 .markdown-body ul ol,
 .markdown-body ol ul,
@@ -14,14 +27,15 @@
   margin-bottom: 0;
 }
 .markdown-body {
-  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 16px;
-  color: #333;
+  color: #eee5d6;
   line-height: 1.6;
   word-wrap: break-word;
   padding: 45px;
-  background: #fff;
-  border: 1px solid #ddd;
+  background: #1d1f21;
+  border: 1px solid #111214;
   -webkit-border-radius: 0 0 3px 3px;
   border-radius: 0 0 3px 3px;
 }
@@ -48,10 +62,11 @@
 .markdown-body h4,
 .markdown-body h5,
 .markdown-body h6 {
+  /*font-family: "Playfair Display", serif; */
   margin-top: 1em;
   margin-bottom: 16px;
-  font-weight: bold;
   line-height: 1.4;
+  color: #e1d7c7;
 }
 .markdown-body h1 .anchor,
 .markdown-body h2 .anchor,
@@ -85,13 +100,13 @@
   padding-bottom: 0.3em;
   font-size: 2.25em;
   line-height: 1.2;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #3c3836;
 }
 .markdown-body h2 {
   padding-bottom: 0.3em;
   font-size: 1.75em;
   line-height: 1.225;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #3c3836;
 }
 .markdown-body h3 {
   font-size: 1.5em;
@@ -112,7 +127,7 @@
   margin-bottom: 20px;
   height: 0;
   border: 0;
-  border-top: 1px solid #eee;
+  border-top: 1px solid #111214;
 }
 .markdown-body ol,
 .markdown-body ul {
@@ -137,7 +152,7 @@
   list-style-type: disc;
 }
 .markdown-body dl {
-  margin-bottom: 1.3em
+  margin-bottom: 1.3em;
 }
 .markdown-body dl dt {
   font-weight: 700;
@@ -151,9 +166,10 @@
 .markdown-body blockquote {
   margin-left: 0;
   margin-right: 0;
-  padding: 0 15px;
-  color: #777;
-  border-left: 4px solid #ddd;
+  padding: 5px 15px;
+  color: #eee5d6;
+  border-left: 4px solid #d4be98;
+  background-color: #252525;
 }
 .markdown-body table {
   display: block;
@@ -165,21 +181,24 @@
   border-spacing: 0;
 }
 .markdown-body table tr {
-  background-color: #fff;
-  border-top: 1px solid #ccc;
+  background-color: #323232;
+  border-top: 1px solid #111214;
 }
 .markdown-body table tr:nth-child(2n) {
-  background-color: #f8f8f8;
+  background-color: #282828;
 }
 .markdown-body table th,
 .markdown-body table td {
   padding: 6px 13px;
-  border: 1px solid #ddd;
+  border: 1px solid #252525;
+}
+.markdown-body table th {
+  background-color: #171819;
 }
 .markdown-body kbd {
   display: inline-block;
   padding: 5px 6px;
-  font: 14px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;
+  font: 14px SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
   line-height: 10px;
   color: #444d56;
   vertical-align: middle;
@@ -194,7 +213,7 @@
   overflow: auto;
   font-size: 85%;
   line-height: 1.45;
-  background-color: #f7f7f7;
+  background-color: #0f1011;
   -webkit-border-radius: 3px;
   border-radius: 3px;
 }
@@ -218,15 +237,17 @@
   content: normal;
 }
 .markdown-body code {
-  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-family: "Fira Code", Consolas, "Liberation Mono", Menlo, Courier,
+    monospace;
   padding: 0;
   padding-top: 0.2em;
   padding-bottom: 0.2em;
   margin: 0;
   font-size: 85%;
-  background-color: rgba(0,0,0,0.04);
+  background-color: #131415;
   -webkit-border-radius: 3px;
   border-radius: 3px;
+  color: #89b482;
 }
 .markdown-body code:before,
 .markdown-body code:after {
@@ -234,7 +255,12 @@
   content: "\00a0";
 }
 .markdown-body a {
-  color: #4078c0;
+  color: #7daea3;
+  text-decoration: underline;
+  background: transparent;
+}
+.markdown-body a:hover {
+  color: #45707a;
   text-decoration: none;
   background: transparent;
 }
@@ -255,7 +281,8 @@
   list-style-type: none;
 }
 .task-list-item input {
-  font: 13px/1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font: 13px/1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   margin: 0 0.35em 0.25em -1.6em;
   vertical-align: middle;
 }
