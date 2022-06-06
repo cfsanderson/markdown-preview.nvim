@@ -120,7 +120,7 @@ body {
 }
 .markdown-body h6 {
   font-size: 1em;
-  color: #777;
+  color: var(--color-text-tertiary);
 }
 .markdown-body hr {
   margin-top: 20px;
@@ -200,12 +200,12 @@ body {
   padding: 5px 6px;
   font: 14px SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
   line-height: 10px;
-  color: #444d56;
+  color: var(--color-kbd-foreground);
   vertical-align: middle;
-  background-color: #fafbfc;
-  border: 1px solid #d1d5da;
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border-tertiary);
   border-radius: 3px;
-  box-shadow: inset 0 -1px 0 #d1d5da;
+  box-shadow: inset 0 -1px 0 var(--color-border-tertiary);
 }
 .markdown-body pre {
   word-wrap: normal;
